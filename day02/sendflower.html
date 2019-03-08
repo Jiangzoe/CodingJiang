@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>talk in js-代理模式</title>
+</head>
+<body>
+<script>
+// object
+// 描述的方式对象是怎样的就出来了
+// 对象字面量 JSON Object 
+const xsj = {
+  name: '徐士杰',
+  age: 22, 
+  single: true,
+  hometown: '绍兴',
+  room: 1319,
+  // 上面的属性
+  //函数功能 行为 
+  // target 形参
+  sendFlower: function(target) 
+  {
+    target.receiveFlower(xsj);
+  }
+};
+const meimei = {
+  name: '梅梅',
+  age: 17,
+  mood:50,
+  receiveFlower: function(sender)
+  {
+      if(meimei.mood>80)
+      {
+          console.log('收到了花');
+      }else{
+          console.log('拒绝收花');
+      }
+    //   如果心情指数大于80 收花 否则拒绝 if/else
+    
+      },
+      listenGoodMood:function(){
+        //   心情不好
+        //   定时器
+          setTimeout(function(){
+            meimei.mood=90;
+            meimei.receiveFlower();
+          },3000)
+  }
+};
+// 送花 A->B  A->C->B
+// A送花 sendFlower
+// C收花 转送给B
+// B收花 receiveFlower
+const huahua={
+    name:'花花',
+    // 与梅梅实现了同样的接口
+    receiveFlower: function(sender){
+        // 心情好再送
+    // 代理者，监听下meimei的心情
+        meimei.listenGoodMood();
+    }
+};
+</script>
+  
+</body>
+</html>
