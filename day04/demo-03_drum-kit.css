@@ -1,0 +1,47 @@
+html {
+    font-size: 10px;
+    background: 
+    url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551806118387&di=aebae3e48111ecef20aac5102a5dae67&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201510%2F29%2F20151029185403_3KVLE.jpeg)
+     bottom center;
+    background-size: cover;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+  }
+  .keys {
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+  }
+  .key {
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    width: 10rem;
+    /* flex: 1; */
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, .4);
+    text-shadow: 0 0 .5rem black;
+  }
+  .key div {
+    font-size: 4rem;
+  }
+  .sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+  }
+  .playing{
+      transform:scale(1.1);
+      border-color: #ffc600;
+      box-shadow: 0 0 1rem #ffc600;
+  }
