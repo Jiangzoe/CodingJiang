@@ -14,4 +14,4 @@ arr.push()
    sta[0] = "("
   2. )  栈不为空 跟顶部元素进行比较，如果是一对，顶部的元素pop()  
    或者 push 为新的顶 
-  3. sta 为空 true| false 
+  3. sta 为空 true| false  
