@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.bootcss.com/weui/1.1.3/style/weui.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="page tabbar js_show">
+      <div class="page__bd">
+        <div class="weui-tab">
+          <div class="weui-tab__panel tab show">
+            <!-- search -->
+            <div class="page__bd">
+              <!--<a href="javascript:;" class="weui-btn weui-btn_primary">点击展现searchBar</a>-->
+              <div class="weui-search-bar" id="searchBar">
+                <form class="weui-search-bar__form">
+                  <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                  </div>
+                  <label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px; opacity: 1; transform: scale(1, 1);">
+                    <i class="weui-icon-search"></i>
+                    <span>搜索</span>
+                  </label>
+                </form>
+                <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+              </div>
+              <div class="goods">
+                <ul class="fruit-items">
+                  <li class="fruit-item">
+                    <div class="pic">
+                      <img src="./images/ningmeng.png" alt="">
+                    </div>
+                    <p>柠檬 ¥10</p>
+                  </li>
+                  <li class="fruit-item">
+                    <div class="pic">
+                      <img src="./images/qiyiguo.png" alt="">
+                    </div>
+                    <p>奇异果 ¥15</p>
+                  </li>
+                  <li class="fruit-item">
+                    <div class="pic">
+                      <img src="./images/yingtao.png" alt="">
+                    </div>
+                    <p>樱桃 ¥25</p>
+                  </li>
+                  <li class="fruit-item">
+                    <div class="pic">
+                      <img src="./images/lanmei.png" alt="">
+                    </div>
+                    <p>蓝莓 ¥35</p>
+                  </li>
+                  <li class="fruit-item">
+                    <div class="pic">
+                      <img src="./images/shengnvguo.png" alt="">
+                    </div>
+                    <p>圣女果 ¥12</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="weui-tab__panel tab">
+              <div class="mine_shop">购物车</div>
+            <!-- 水果 -->
+            <div class="fruit">
+              <div class="weui-panel__bd">
+                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/apple.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">苹果</h4>
+                    <p class="weui-media-box__desc">苹果，是水果中的一种，是蔷薇科苹果亚科苹果属植物，其树为落叶乔木。苹果富含矿物质和维生素，是人们经常食用的水果之一。</p>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/banana.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">香蕉</h4>
+                    <p class="weui-media-box__desc">香蕉，芭蕉科芭蕉属植物，又指其果实，热带地区广泛种植。香蕉味香、富含营养。</p>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/lanmei.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">蓝莓</h4>
+                    <p class="weui-media-box__desc">蓝莓，意为蓝色浆果，属杜鹃花科，越橘属植物。起源于北美，多年生灌木小浆果果树。</p>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/mangguo.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">芒果</h4>
+                    <p class="weui-media-box__desc">芒果是一种原产印度的漆树科常绿大乔木，叶革质，互生；花小，杂性，黄色或淡黄色，成顶生的圆锥花序。</p>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/ningmeng.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">柠檬</h4>
+                    <p class="weui-media-box__desc">为双子叶植物纲芸香科柑橘属植物，柠檬又称柠果、洋柠檬、益母果等。</p>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/qiyiguo.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">奇异果</h4>
+                    <p class="weui-media-box__desc">奇异果是猕猴桃的一个人工选育品种，因使用广泛而成为了猕猴桃的代称</p>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/shengnvguo.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">圣女果</h4>
+                    <p class="weui-media-box__desc">圣女果，北方常被称为小西红柿，正式名称为小番茄果，是一年生草本植物，属茄科番茄属。</p>
+                  </div>
+                </a>
+                <a href="javascript:void(0);" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/yingtao.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">樱桃</h4>
+                    <p class="weui-media-box__desc">樱桃，是某些李属类植物的统称，包括樱桃亚属、酸樱桃亚属、桂樱亚属等。</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="weui-tab__panel tab">
+            <div class="mine_title">我的</div>
+            <div class="weui-cell">
+              <div class="weui-cell__hd avatar">
+                <img src="./images/me.JPG">
+              </div>
+              <div class="weui-cell__bd">
+                <p>一只酱</p>
+                <p style="font-size: 13px;color: #888888;">别忘了我的脸</p>
+              </div>
+            </div>
+            <!--  -->
+            <div class="weui-cells">
+              <div class="weui-cell weui-cell_access after">
+                <div class="weui-cell__bd">
+                  <img src="./images/money.png" alt="">
+                  <span>便利购余额</span>
+                </div>
+                <div class="weui-cell__ft" style="font-size: 0">
+                  <span style="vertical-align:middle; font-size: 17px;">100 元</span>
+                </div>
+              </div>
+              <div class="weui-cell weui-cell_access">
+                  <div class="weui-cell__bd">
+                    <img src="./images/coupon.png" alt="">
+                    <span>优惠券</span>
+                  </div>
+                  <div class="weui-cell__ft" style="font-size: 0">
+                    <span style="vertical-align:middle; font-size: 17px;">0 张</span>
+                  </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="weui-cells">
+                <div class="weui-cell weui-cell_access after">
+                  <div class="weui-cell__bd">
+                    <img src="./images/dingdan.png" alt="">
+                    <span>我的订单</span>
+                  </div>
+                  <div class="weui-cell__ft" style="font-size: 0"></div>
+                </div>
+                <div class="weui-cell weui-cell_access">
+                    <div class="weui-cell__bd">
+                      <img src="./images/bukuan.png" alt="">
+                      <span>补款</span>
+                    </div>
+                    <div class="weui-cell__ft" style="font-size: 0"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="weui-tabbar">
+            <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+              <span style="display: inline-block;position: relative;">
+                <img src="./images/store.png" alt="" class="weui-tabbar__icon">
+                <span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>
+              </span>
+              <p class="weui-tabbar__label">商城</p>
+            </a>
+            <a href="javascript:;" class="weui-tabbar__item">
+              <img src="./images/shoppingcart.png" alt="" class="weui-tabbar__icon">
+              <p class="weui-tabbar__label">购物车</p>
+            </a>
+            <a href="javascript:;" class="weui-tabbar__item">
+              <img src="./images/mine.png" alt="" class="weui-tabbar__icon">
+              <p class="weui-tabbar__label">我的</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const choose = document.querySelectorAll('.weui-tabbar__item');
+    const tabs = document.querySelectorAll('.weui-tab__panel');
+    for (let i = 0; i < choose.length; i++) {
+      choose[i].addEventListener('click', function() {
+        showTab.call(this)
+      })
+    }
+
+    function showTab() {
+      for(let j = 0, len = tabs.length; j < len; j++) {
+        console.log(choose[j])
+        console.log(this)
+        if(choose[j] === this) {
+          choose[j].classList.add('weui-bar__item_on');
+          tabs[j].classList.add('show');
+        } else {
+          choose[j].classList.remove('weui-bar__item_on');
+          tabs[j].classList.remove('show');
+        }
+      }
+    }
+
+    // 搜索
+    const searchText = document.getElementById('searchText')
+    const searchBar = document.getElementById('searchBar')
+    const searchInput = document.getElementById('searchInput')
+    const searchCancel = document.getElementById('searchCancel')
+    searchText.addEventListener('click',function () {
+      searchBar.classList.add('weui-search-bar_focusing')
+      searchInput.focus()
+    });
+    searchCancel.addEventListener('click',function () {
+      searchBar.classList.remove('weui-search-bar_focusing')
+    })
+  </script>
+</body>
+</html>
