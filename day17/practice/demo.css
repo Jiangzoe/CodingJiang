@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
+ul li{
+    list-style: none;
+    color: #999999;
+}
+.page{
+    width: 100%;
+    padding: 15px;
+    background-color: #f5fafe;
+    box-sizing: border-box; 
+}
+.page-header{
+    width: 100%;
+}
+.page-header__pic{
+    width: 100%;
+    height: 200px;
+    background: url(./images/1.jpg) no-repeat;
+    background-size: cover;
+}
+.page-header__userinfo{
+    padding: 10px 10px 13px 10px;
+    position: relative;
+    background-color: #fff;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius: 5px; 
+}
+.name{
+    line-height: 1;
+}
+.name::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(./images/girl.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 75px;
+    top:11px;
+}
+.labels{
+    margin-top: 10px;
+}
+.label{
+    padding: 5px 10px;
+    color: #fff;
+    font-size:14px;
+    border-radius: 5px;
+}
+.blue{
+    background-color: #48a6fd;
+}
+.green{
+    background-color: #1dca42;
+}
+.orange{
+    background-color: #fb8800;
+}
+.page-header__msg{
+    margin-top: 10px;
+}
+.item{
+    width: 95px;
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    font-size: 13px;
+}
+.city::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(./images/city.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.job::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(./images/job.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.hobby::before{
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: url(./images/heart.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.wechat::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(./images/wechat.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.phone::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(./images/phone.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.ewm{
+    height: 33px;
+    width: 32px;
+    position: absolute;
+    top: 32px;
+    right: 11px;
+}
+.ewm img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.envelope{
+    height: 50px;
+    width: 55px;
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+}
+.envelope img{
+    display: block;
+    height: 100%;width: 100%;
+    transform: rotate(20deg);
+}
+.page-body{
+    margin-top:10px;
+    width: 100%;
+    height: 43%;
+}
+.weui-cell_access{
+    background-color: #fff;
+    border-radius: 5px;
+    height: 50px;
+    width: 91%;
+}
+.picture{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.weui-cell__hd{
+    margin-right: 5px;
+}
+.weui-cell__ft{
+   font-size: 13px;
+   position: absolute;
+   top: -5px;
+}
+.page-body__provide{
+    margin-top: 10px;
+    padding: 10px;
+    height: 65px;
+    width: 94%;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.b-green::before{
+    content: "";
+    width: 3px;
+    height: 15px;
+    background-color: #1dca42;
+    position: absolute;
+    top: 512px;
+    left: 13px;
+}
+.page-body__provide h3{
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 4.5px;
+}
+.page-body__provide p{
+    font-size: 12px;
+    color: #494949;
+    margin-bottom: 7.5px;
+}
+.page-body__brand{
+    margin-top: 10px;
+    height: 140px;
+    width: 94%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+.b-orange::before{
+    content: "";
+    width: 3px;
+    height: 15px;
+    background-color: #fb8800;
+    position: absolute;
+    top: 605px;
+    left: 13px;
+}
+.page-body__brand h3{
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 4.5px;
+}
+.page-body__brand img{
+    width: 100px;
+    height: 100px;
+    margin-right: 4.2px;
+}
+.page-foot{
+    width: 100%;
+    margin-top: 7px;
+}
+.page-foot_button{
+    width: 167px;
+    height: 45px;
+    border-radius: 25px;
+    font-size: 18px;
+}
+.edit{
+    background-color: #fff;
+    border: #f3f8fc;
+}
+.share{
+    background-color: #48a6fd;
+    border: #afd7fc;
+    color:#fff;
+}
+.edpic{
+    width: 20px;
+    height: 20px;
+}
