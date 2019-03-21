@@ -14,8 +14,4 @@
 (不建议使用)
 5. 一个更优雅的改进 --尼古拉斯大师 方式
 把display设置为table，可以创建一个表格单元，这个匿名的表格单元可以直接出发BFC。
-.clearfix:after{
-    content:'';
-    clear: both;
-    display:table;
-}
+在父容器上添加display:table属性
