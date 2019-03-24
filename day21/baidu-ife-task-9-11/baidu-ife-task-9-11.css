@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f2f2f2;
+}
+header{
+    background: url(./images/mount.png) 0 0 no-repeat;
+    background-size: 100%;
+    /* background-size: cover; */
+}
+header .mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.65);
+    overflow: hidden;
+}
+header .content{
+    width: 970px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, .7)
+}
+.header .content{
+    width: 970px;
+    margin: 208px auto 0;
+    color: rgba(255, 255, 255, .7)
+}
+.hello .title{
+    font-size:62px;
+    font-weight:200;
+    color:rgba(255,255,255,1);
+    line-height:72px;
+    text-align: center;
+}
+.hello .text{
+    font-size:20px;
+    font-weight:200;
+    line-height:32px;
+    width: 766px;
+    margin: 86px auto 0;
+    text-align: center;
+}
+/* 表单 */
+.create{
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 2px;
+    margin-top: 104px;
+    padding: 61px 100px 52px;
+}
+.create .title{
+    text-align: center;
+    font-size: 16px;
+    line-height: 28px;
+}
+.create .profile{
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, .3);
+    margin: 19px auto 45px;
+}
+.create .input input{
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, .2);
+    width: 292px;
+    height: 50px;
+    background:rgba(0,0,0,0);
+    border-radius: 2px;
+    color: #ffff;
+    text-indent: 22px;
+    /* margin-left: 30px; */
+}
+.create .input{
+    display: flex;
+    justify-content: space-between;
+}
+.create .input input[type="button"]{
+    width: 125px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    text-indent: 0;
+}
+/*    */
+.introduce{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.introduce-content{
+    text-align: center;
+    padding-top: 79px;
+}
+.introduce-content .title{
+    color: #000;
+    font-size: 14px;
+}
+.introduce-content .text{
+    width:657px;
+    font-size:42px;
+    font-weight:200;
+    color:rgba(20,20,20,1);
+    line-height:52px;
+    margin: 39px auto 0;
+}
+.introduce .section{
+    width: 986px;
+    margin: 85px auto 0;
+    padding-bottom: 102px;
+}
+.section .option{
+    box-sizing: border-box;
+    display: flex;
+    flex:1;
+}
+.section .option1{
+    padding-bottom: 80px;
+}
+.section .option .icon{
+    margin-right: 31px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.section .option .icon.iphoneIcon{
+    width: 30px;
+    height: 49px;
+    background-image: url(./images/Iphone-Icon.png);
+}
+.section .option .icon.checkIcon{
+    width: 40px;
+    height: 37px;
+    background-image: url(./images/Check-Icon.png);
+}
+.section-line{
+    display: flex;
+    justify-content: space-between;
+}
+.section .option .icon.PencilIcon{
+    width: 50px;
+    height: 49px;
+    background-image: url(./images/Pencil-Icon.png);
+}
+.section .option .icon.SettingsIcon{
+    width: 50px;
+    height: 42px;
+    background-image: url(./images/Settings-Icon.png);
+}
+.section .option .name{
+    font-size:20px;
+    font-weight:300;
+    color:rgba(20,20,20,1);
+    line-height:32px;
+}
+.section .option .des{
+    font-size:16px;
+    font-weight:200;
+    color:rgba(20,20,20,.7);
+    line-height:26px;
+}
+/* 产品相关 */
+.product-container{
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid rgba(20,20,20,.1);
+}
+.product-related{
+    background-color: #fff;
+    width: 975px;
+    margin: 0 auto;
+}
+.product-related .title{
+    text-align: center;
+    font-size:42px;
+    font-weight:200;
+    color:rgba(20,20,20,1);
+    line-height:52px;
+    margin-bottom: 89px;
+    padding-top: 99px;
+}
+.product-container .product-head{
+    width: 55%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 43px;
+}
+.product-head .head1{
+    background: url(./images/Singleton.png);
+    width: 120px;
+    height: 35px;
+    margin-right: 247px;
+}
+.product-head .head2{
+    background: url(./images/Hero.png);
+    width: 76px;
+    height: 34px;
+    margin-right: 254px;
+}
+.product-head .head3{
+    background: url(./images/Portland.png);
+    width: 117px;
+    height: 31px;
+}
+.product-container .person-text{
+    width: 62%;
+    display: flex;
+    flex:1;
+    font-size:16px;
+    font-weight:200;
+    color:rgba(20,20,20,.7);
+    line-height:26px;
+    margin: 0 auto;
+    padding-bottom: 104px;
+}
+.person-text .text1{
+    margin-right: 86px;
+}
+.person-text .text2{
+    margin-right: 84px;
+}
+/* 产品说明 */
+.product-des{
+    padding-top: 114px;
+    background-color: #fff;
+    width: 975px;
+    margin: 0 auto;
+}
+.product-des .product-item{
+    display: flex;
+    align-items: center;
+}
+.product-des .product-pb{
+    padding-bottom: 100px;
+}
+.product-des img{
+    width: 570px;
+    height: 350px;
+}
+.product-des .product-item:last-child .product-info{
+    padding-right: 100px;
+    padding-left: 0;
+}
+.product-des .product-info{
+    width: 305px;
+    padding-left: 100px;
+}
+.product-des .product-info .title {
+  font-size:20px;
+  font-weight:300;
+  color:rgba(20,20,20,1);
+  line-height:32px;
+  margin-bottom: 35px;
+}
+.product-des .product-info .text {
+  font-size:16px;
+  font-weight:200;
+  color:rgba(20,20,20,.7);
+  line-height:28px;
+}
+/* 政策相关 */
+.policies{
+    width: 100%;
+    height: 800px;
+    background: url(./images/tree.png) 0 0 no-repeat;
+    background-size: cover;
+    display: flex;
+}
+.policies-left{
+    width: 60%;
+}
+.policies-title{
+    width: 39.5%;
+    font-size:42px;
+    font-weight:200;
+    color:rgba(255,255,255,1);
+    line-height:52px;
+    padding-top: 182px;
+    padding-bottom: 47px;
+    margin: 0 auto;
+}
+.policies-content{
+    width:39.5%;
+    font-size:18px;
+    font-weight:200;
+    color:rgba(255,255,255,.7);
+    line-height:28px;
+    padding-bottom: 58px;
+    margin: 0 auto;
+}
+.input2{
+    padding-bottom: 186px;
+    width: 58%;
+    margin: 0 30% 20%;
+}
+.input2 input{
+    width:240px;
+    height:60px;
+    border: 1px solid rgba(255, 255, 255, .2);
+    background:rgba(255,255,255,1);
+    border-radius:2px;
+    cursor: pointer;
+    font-size:12px;
+    font-weight:300;
+    color:rgba(20,20,20,1);
+}
+.input2 .button2{
+    margin-left: 30px;
+    color:rgba(255,255,255,1);
+    background:rgba(20,20,20,.1);
+}
+.policies-right{
+    width: 40%;
+    height: 800px;
+}
+.policies-data{
+    height: 600px;
+    background:rgba(20,20,20,.1);
+    margin: 104px 0 96px auto;
+    border: 1px solid rgba(255,255,255,.3);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.policies-img{
+    background: url(./images/Screen.png) no-repeat;
+    height: 600px;
+    width: 90%;
+    margin: 30px 0 30px auto;
+}
