@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(nickName='未知昵称'){
+            // if(!nickName){
+            //     nickName="未知昵称";
+            // }
+            // this.nickName=nickName || '未知昵称';
+            // this.nickName:nickName ?'未知昵称';
+            this.nickName=nickName;
+        }
+        const p1=new Person('老王');
+        //p1 
+        const p2=new Person();
+
+        //rest 参数 形式（...变量名） args只能放到最后
+        function sum(...args){
+            // Array.from(arguments);
+            console.log(args);
+        }
+        sum(2,4,6,8);
+
+
+        // function Person(nickName){
+        //     // if(!nickName){
+        //     //     nickName="未知昵称";
+        //     // }
+        //     // this.nickName=nickName || '未知昵称';
+            
+        //     this.nickName=nickName? nickName:'未知昵称';
+        // }
+        // const p1=new Person('老王');
+        // //p1 
+        // const p2=new Person();
+
+    </script>
+</body>
+</html>

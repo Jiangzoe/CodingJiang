@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array</title>
+</head>
+<body>
+    <script>
+        const arr=[19,18,34,45];
+        const this_age=arr.find(function(age){ //arr.find 会将符合条件的第一个值返回 
+            return age>199;
+        })
+        //arr的过滤
+        const this_ages=arr.filter(function(age){  // arr.filter 会将所有符合条件的值返回以数组的形式返回
+            return age>99
+        })
+        const this_every=
+        arr.every(age=>age>=18); // 只有每个值都满足条件才会返回 true
+        const this_some=
+        arr.some(age=>age<18);  // 某个值满足则返回true
+    </script>
+</body>
+</html>
