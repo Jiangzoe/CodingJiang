@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery源码解析 - 旅梦源码分析</title>
+</head>
+
+<body>
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1554802587344&di=734d3a68f40683879182913c486046e2&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201610%2F22%2F20161022162651_Cxa2h.jpeg"
+        alt="" onLoad="photoLoaded();" />
+        <script src="https://cdn.bootcss.com/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    </script>
+    <script>
+        //页面加载完成之后
+        //开始写js是不对的，晚了
+        window.onload = function (){
+            console.log('window load');
+        }
+        // html结构下载，css形成静态的网页 并且生成了文档树
+        // document.addEventListener('DOMContentLoaded',function(){
+        //     // console.log('DOM Ready');
+        //     // DOM Ready
+        // })
+
+        //DOMContentLoaded 会有兼容性的问题，
+        //jQuery为此而来
+
+        // $ 是函数 function(){}是参数
+        $(function(){
+            // 开始js
+            console.log('DOM Ready')
+        })
+    function photoLoaded(){
+        console.log('图片loaded');
+    }
+    </script>
+</body>
+
+</html>
