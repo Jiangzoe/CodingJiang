@@ -9,7 +9,7 @@
   <link href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
   <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
-  <link rel="stylesheet" href="./cat-eyes-movie.css">
+  <link rel="stylesheet" href="./style.css">
   <title>Document</title>
 </head>
 
@@ -88,6 +88,15 @@
     <section class="section-seperate">
       <p class="action-list section-til">演职人员</p>
       <ul class="movie-celebrities">
+        <!-- <li>
+          <a href="#" class="link">
+            <div class="movie-celebrities__pic">
+              <img src="http://p1.meituan.net/moviemachine/6e06b1eee9a74c9573fdb8150fb8561271624.jpg" alt="">
+            </div>
+            <span class="movie-celebrities-nick">wqwqw</span>
+            <span class="movie-celebrities-roles">fdf</span>
+          </a>
+        </li> -->
       </ul>
     </section>
     <!-- section4 -->
@@ -96,28 +105,51 @@
       <div class="weui-flex">
         <div class="weui-flex__item">
           <div class="placeholder">
-            <span></span>
+            <span id="ranking"></span>
             <p>昨日票房排行</p>
           </div>
         </div>
         <div class="weui-flex__item">
           <div class="placeholder">
-            <span></span>
+            <span id="bookingWeek"></span>
             <p>首周票房(万)</p>
           </div>
         </div>
         <div class="weui-flex__item">
           <div class="placeholder">
-            <span></span>
+            <span id="bookingTotal"></span>
             <p>累计票房(万)</p>
           </div>
         </div>
       </div>
     </section>
     <!-- section5 -->
-    <section class="movie-photo section-expander">
+    <section class="movie-photo section-seperate">
       <p class="action-list section-til">视频和剧照</p>
       <ul class="movie-photo__lists">
+        <!-- <li class="stage-img-container">
+          <a href="#" class="link">
+            <div class="movie-celebrities__pic">
+              <img src="http://p1.meituan.net/moviemachine/6e06b1eee9a74c9573fdb8150fb8561271624.jpg" alt="">
+            </div>
+          </a>
+        </li> -->
+      </ul>
+    </section>
+    <!-- section6 -->
+    <section class="section-seperate section-expander">
+      <p class="section-til pos_r">讨论
+        <span class="join-comment">参与讨论</span>
+      </p>
+      <ul class="movie-comment" id="movie-comment">
+
+      </ul>
+    </section>
+    <!-- section7 -->
+    <section class="section-seperate section-expander">
+      <p class="section-til">精选</p>
+      <ul class="chosen-conmment" id="chosen-conmment">
+
       </ul>
     </section>
     <!-- toast -->
@@ -132,7 +164,7 @@
   <script>
     (function () {
       $.ajax({
-        url: 'https://www.easy-mock.com/mock/5ca2c29464930718b239eb94/lm/lvmeng/myMovie-demo',
+        url: 'https://www.easy-mock.com/mock/5ca49609ea0dc52bf3b67fe1/Jiang/cat-eye-movie',
         type: 'get',
         success: function (res) {
           console.log(res)
@@ -149,7 +181,9 @@
           $('.text-expander__content p').html(res.data.desc)
           celebrity(res.data.person)
           booking(res.data.booking)
-          movie(res.data.pictures)
+          photo(res.data.pictures)
+          discuss(res.data.commentNum)
+          chosen(res.data.comment)
         }
       })
       function star(e) {
@@ -201,16 +235,15 @@
         </li>`)
         }
       }
-      //票房
-      function booking(a) {
-        $('.placeholder span').eq(0).html(a.ranking)
-        $('.placeholder span').eq(1).html(a.bookingWeek)
-        $('.placeholder span').eq(2).html(a.bookingTotal)
+      // 票房 
+      function booking(e) {
+        $('#ranking').html(e.ranking)
+        $('#bookingWeek').html(e.bookingWeek)
+        $('#bookingTotal').html(e.bookingTotal)
       }
-      //视频与剧照
-      function movie(eeee) {
-        for (let m of eeee) {
-          console.log(m)
+      // 剧照
+      function photo(e) {
+        for (let m of e) {
           $('.movie-photo__lists').append(`<li class="stage-img-container">
           <a href="#" class="link">
             <div class="movie-celebrities__pic">
@@ -219,6 +252,88 @@
           </a>
         </li>`)
         }
+      }
+      //讨论
+      function discuss(a) {
+        $('#movie-comment').append(`<li class="comment-item">
+          <div class="comment-item__sort">
+            <span>全部</span>
+            <span class="comment-item__num"></span>
+          </div>
+        </li>
+        <li class="comment-item">
+          <div class="comment-item__sort">
+            <span>好评</span>
+            <span class="comment-item__num">${a.good}</span>
+          </div>
+        </li>
+        <li class="comment-item">
+          <div class="comment-item__sort">
+            <span>差评</span>
+            <span class="comment-item__num">${a.bad}</span>
+          </div>
+        </li>
+        <li class="comment-item">
+          <div class="comment-item__sort">
+            <span>点映</span>
+            <span class="comment-item__num">${a.dy}</span>
+          </div>
+        </li>
+        <li class="comment-item">
+          <div class="comment-item__sort">
+            <span>购票</span>
+            <span class="comment-item__num">${a.bought}</span>
+          </div>
+        </li>
+        <li class="comment-item">
+          <div class="comment-item__sort">
+            <span>认证作者</span>
+            <span class="comment-item__num">${a.author}</span>
+          </div>
+        </li>
+        <li class="comment-item">
+          <div class="comment-item__sort">
+            <span>同城</span>
+            <span class="comment-item__num">${a.sameCity}</span>
+          </div>
+        </li>`)
+      }
+      //精选
+      function chosen(e) {
+        for (let m of e) {
+        $('#chosen-conmment').append(`<li class="chosen-conmment__item">
+          <div class="item-avatar">
+            <img src="${m.avatal}" alt="">
+          </div>
+          <div class="item-detail">
+            <div class="item-detail__hd">
+              <div>
+                <span class="nick-name">${m.nickName}</span>
+                <span class="level">
+                  <img src="" alt="">
+                </span>
+              </div>
+              <p class="item-score__desc">给这部电影打了<span>${m.grade}</span>分</p>
+            </div>
+            <div class="item-detail__content">
+              <p>${m.detail}</p>
+            </div>
+            <div class="item-detail__footer">
+              <span class="item-detail__time">03-22</span>
+              <div class="pull-right">
+                <a href="#" class="link comment-like">
+                  <i class="icon icon-approve"></i>
+                  <span>${m.like}</span>
+                </a>
+                <a href="#" class="link comment-reply">
+                    <i class="icon icon-comment"></i>
+                    <span>${m.reply}</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </li>`)
+      }
       }
     })()
   </script>
