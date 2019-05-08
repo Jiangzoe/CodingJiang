@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>灭霸</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div id="app">
+      <Snap />
+  </div>
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  <script src="./heroes.js"></script>
+  <script>
+    // MVVM Model-View-ViewModel 组件
+    Vue.component('Content',{
+      // 外部传入的数据
+      props: {
+        heroes: {
+          type: Array
+        }
+      },
+      data() {
+        return {
+        }
+      },
+      template:`
+      <div class="content">
+        <div class="item"
+        v-for="(hero,index) in heroes"
+        >
+        <div class="item-body">
+          <div class="avatar">
+            <img :src="hero.src" />
+          </div>
+          <div class="info">
+            {{ hero.name }}
+          </div>
+        </div>
+        </div>
+      </div>
+      `
+    })
+    Vue.component('Snap',{
+      data() {
+        return {
+          snaping: false,
+          reversing: false,
+          showSnap: true,
+          showReverse: false,
+          heroes
+        }
+      },
+      methods:{
+        snapHandle() {
+          this.snaping = true;
+          const audio = this.$refs.allAudio;
+          audio.src = 'https://yiliang114.github.io/vue-thanos-snap/media/thanos_snap_sound.b746c7d7.mp3'
+          audio.play();
+          setTimeout(() => {
+            this.showSnap = false;
+            this.showReverse = true;
+            this.snaping = false;
+          }, 2800)
+        },
+        reserveHandle() {
+          this.reversing = true;
+          
+          const audio = this.$refs.allAudio;
+          audio.src = "https://yiliang114.github.io/vue-thanos-snap/media/thanos_reverse_sound.e00730e1.mp3";
+          audio.play();
+          setTimeout(() => {
+            this.showSnap = true;
+            this.showReverse = false;
+            this.reversing = false;
+          }, 2800)
+        }
+      },
+      template:`
+      <div class="main">
+        <div class="gauntlet">
+            <div class="gauntlet-wrapper">
+                <div id="gauntlet-snap"
+                v-if="showSnap"
+                :class="snaping ? 'snaping' : '' " 
+                @click="snapHandle"
+                class="gauntlet-item">
+                </div>
+                <div class="gauntlet-item"
+                :class="reversing ? 'reversing' : '' "
+                v-if="showReverse"
+                @click="reserveHandle"
+                id="gauntlet-reverse"
+                >
+                </div>
+            </div>
+        </div>
+        <audio preload ref="allAudio">
+        </audio>
+        <Content :heroes="heroes" />
+      </div>
+      `
+    })
+    let vue = new Vue({
+      el:'#app'
+    })
+  </script>
+</body>
+</html>
