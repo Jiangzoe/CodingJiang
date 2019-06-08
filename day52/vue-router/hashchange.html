@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hashchange实现前端路由</title>
+</head>
+
+<body>
+  <a href="#top">回到首页</a>
+  <a href="#/" data-href="/">home</a>
+  <a href="#/book" data-href="/">book</a>
+  <a href="#/movie" data-href="/">movie</a>
+  <div id="content"></div>
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  <script>
+    class Router {
+      constructor(options) {
+        // 前端路由数组
+        this.routes = {
+
+        }
+        this.init();
+        options.forEach(item => {
+          this.route(item.path,() => {
+            document.getElementById('content').innerHTML = item.component;
+          })
+        });
+        console.log(this.routes);
+      }
+      route (path,cb){
+        this.routes[path] = cb;
+      }
+      // 链接的点击事件
+      bindEvent() {
+
+      }
+      init() {
+        window.addEventListener('load',this.updateView.bind(this),false)
+        window.addEventListener('hashchange', this.updateView.bind(this),false);
+      }
+      updateView() {
+        // console.log('updated');
+        //  '/' 代表首页 
+        const hashTag = window.location.hash.slice(1) || '/'
+        this.routes[hashTag] && this.routes[hashTag]();
+      }
+    }
+    new Router([
+      {
+        path: '/',
+        component: 'home'
+      },
+      {
+        path: '/book',
+        component: 'book'
+      },
+      {
+        path: '/movie',
+        component: 'movie'
+      }
+    ]);
+  </script>
+</body>
+
+</html>
