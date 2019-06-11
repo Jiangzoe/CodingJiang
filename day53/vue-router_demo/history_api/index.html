@@ -34,12 +34,14 @@
         $('.content').text(state.content)
         $('.photo').attr('src',state.photo)
         $('title').text(state.title)
+        console.log(state)
       }
       function createState(node){
         console.log(node,'------');
         let state = {
           content:node.find('.content').text(),
-          photo:node.find('.photo').attr('src')
+          photo:node.find('.photo').attr('src'),
+          title:node.find('title').text()
         };
         return state
       }
