@@ -66,7 +66,7 @@ export default {
       font-size: 14px;
       color: rgb(77, 85, 93);
 
-      &.active {
+      &.router-link-active {
         color: rgb(240, 20, 20);
       }
     }
