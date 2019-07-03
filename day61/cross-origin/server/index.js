@@ -3,10 +3,15 @@ const app = new Koa();
 const koaStatic = require('koa-static');
 const path = require('path');
 const router = require('koa-router')();
+
+app.use(koaStatic(
+  path.join(__dirname, './public/')
+))
+
 // res.set
 app.use(async (ctx, next) => {
   // 允许哪个域名请求 *
-  ctx.set('Access-Control-Allow-Origin', 'http://localhost:5500');
+  ctx.set('Access-Control-Allow-Origin', 'http://127.0.0.1:8080');
   // 服务器支持的头部 x-custom
   ctx.set('Access-Control-Allow-Headers', 'x-custom,content-type');
   // 支持的方法
@@ -19,25 +24,25 @@ app.use(async (ctx, next) => {
   await next();
 })
 router.get('/api/post', async function (ctx) {
-  console.log('cookie', ctx.cookies.get('name'));
+  // console.log('cookie', ctx.cookies.get('name'));
+  ctx.cookies.set('key', 'value')
   ctx.body = [
     { title: 'node.js 入门到精通', createTime: '2018-12-12' },
     { title: 'php 入门到精通', createTime: '2018-11-11' },
   ]
 });
+
 router.get('/api/user', async (ctx) => {
-    const callback = ctx.request.query.callback;
-    const user = {
-        name: 'abc',
-        age: 18
-    }
-    
-    ctx.body = `${callback}(${JSON.stringify(user)})`;
+  const callback = ctx.request.query.callback
+  const user = {
+    name: 'abc', age: 18
+  }
+  ctx.body = `${callback}(${JSON.stringify(user)})`
 })
 
 app
   .use(router.routes())
   .use(router.allowedMethods());
-app.listen(8000, () => {
-  console.log('server is running 8000');
+app.listen(8080, () => {
+  console.log('server is running 8080');
 });
